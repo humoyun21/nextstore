@@ -3,12 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/output.css" />
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./loader.css" />
+    <link rel="stylesheet" href="./modal.css" />
+    <link rel="stylesheet" href="./katalog.css">
     <title>Document</title>
   </head>
   <body>
+    <div class="load_wrapper">
+      <span class="loader"></span>
+    </div>
+<div class="modal_wrapper">
+              <div class="modal_content">
+                  <div class="modal_header">
+                       <span></span>  <span id="close"> <svg class="text-4xl mt-[20px] mr-[20px] " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
+                  </div>
+        
+                  <div class="modal_body py-6">
+        
+                    <h3 class="text-center modal_title text-black-600 text-[28px] font-[Poppins] font-[591]"> Telefon raqam orqali kirish </h3>
+                    <form action="#" class="mx-auto w-[60%] py-5">
+                      <label for="username" class=" block mb-4">
+                          <input class="py-3 w-[346px] h-[40px]  border border-[#E4E7EE] px-4 rounded-[8px] ms-[-35px]" type="text " id="username" placeholder="Telefon raqam ">
+                      </label>
+                      <label for="password" class="block">
+                          <input class="py-3 w-[346px] h-[40px]  border border-[#E4E7EE] px-4 rounded-[8px] ms-[-35px]" type="password" id="password" placeholder="Parol">
+                      </label>
+                      
+                    </form>
+                    <button class="bg-[#0D63F3] rounded-[8px] h-[40px] modal_submit px-3 py-2 text-white block mx-auto my-4 w-[346px]">
+                      Kirish
+                  </button>
+                  <a href="#" class="text-center text-black-600 text-[#0D63F3] font-[Poppins] text-[14px] font-[539] mt-[20px]">Parolni unutdingizmi ?</a>
+                  </div>
+        
+                  <div class="modal_footer">
+        
+                  </div>
+              </div>
+          </div>
+
+
+
+          
+
+
+
+
+    
+
+
+    
+
+
     <header>
       <nav class="py-5 border-b-[1px] border-solid border-[#EFF2EF]">
         <div
@@ -51,10 +101,14 @@
             />
           </svg>
 
-          <button class="bg-red-600 flex gap-2 p-2 rounded-[8px] px-4">
+          <button id="katalog" class=" bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 flex gap-2 p-2 rounded-[8px] px-4">
             <img src="./assests/images/menu.svg" alt="" />
             <p class="text-white">KATALOG</p>
+
           </button>
+          <div id="katalog_panel" class="relative hidden"></div>
+
+         
 
           <div class="flex items-center gap-5">
             <div
@@ -80,6 +134,7 @@
               </button>
 
               <button
+                id="login"
                 class="py-3 px-8 text-white text-[16px] font-medium bg-[#0E8B00] rounded-[8px] duration-300 hover:cursor-pointer hover:text-[#2D432C] hover:bg-transparent hover:duration-300"
               >
                 Kirish
@@ -89,6 +144,9 @@
         </div>
       </nav>
     </header>
+
+
+
     <main class="bg-[#ECF4FF]">
       <section
         class="container mx-auto px-4 w-[1500px] flex items-center justify-between"
@@ -775,4 +833,6 @@
   </body>
   <script src="./script.js"></script>
   <script src="./db.js"></script>
+  <script src="./katalog.js"></script>
+  <script src="./index.js"></script>
 </html>
